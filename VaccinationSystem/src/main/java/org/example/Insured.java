@@ -21,7 +21,12 @@ public class Insured {
     }
 
     public Insured() {
-
+        this.afm = null;
+        this.amka = null;
+        this.name = null;
+        this.date = null;
+        this.surname = null;
+        this.email = null;
     }
 
     public String getAfm() {
