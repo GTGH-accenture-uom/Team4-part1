@@ -1,5 +1,6 @@
 package org.example;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Insured {
@@ -7,13 +8,13 @@ public class Insured {
     private String afm;
     private String amka;
     private String name;
-    private Date date;
+    private LocalDate date;
     private String surname;
     private String email;
     private Timeslot timeslot;
 
     //constructors
-    public Insured(String afm, String amka, String name, Date date, String surname, String email) {
+    public Insured(String afm, String amka, String name, LocalDate date, String surname, String email) {
         this.afm = afm;
         this.amka = amka;
         this.name = name;
@@ -58,11 +59,11 @@ public class Insured {
         this.name = name;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
@@ -96,8 +97,8 @@ public class Insured {
                 "afm='" + afm + '\'' +
                 ", amka:'" + amka + '\'' +
                 ", name:'" + name + '\'' +
-                ", date:" + date.getDate() + "/" + date.getMonth() + "/" + date.getYear() +
                 ", surname:'" + surname + '\'' +
+                ", date:" + date.getDayOfMonth() + "/" + date.getMonth() + "/" + date.getYear() +
                 ", email:'" + email + '\'' +
                 '}' + "\n";
     }
