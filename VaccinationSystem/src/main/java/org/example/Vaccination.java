@@ -8,6 +8,7 @@ public class Vaccination {
     private LocalDate vaccinationDate;
     private LocalDate expirationDate;
 
+    //constructors
     public Vaccination(){
         this.insured = new Insured();
         this.doctor = new Doctor();
@@ -21,6 +22,7 @@ public class Vaccination {
         this.expirationDate = expirationDate;
     }
 
+    //getters and setters
     public Insured getInsured() {
         return insured;
     }
@@ -53,6 +55,8 @@ public class Vaccination {
         this.expirationDate = expirationDate;
     }
 
+
+    //toString method
     @Override
     public String toString() {
         return "Vaccination{" +
