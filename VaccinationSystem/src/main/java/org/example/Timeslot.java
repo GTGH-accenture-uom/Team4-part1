@@ -1,5 +1,7 @@
 package org.example;
 
+import java.time.LocalDate;
+
 public class Timeslot {
 
     private int day;
@@ -10,7 +12,9 @@ public class Timeslot {
     private int startMinute;
     private int endMinute;
     private Doctor doctor;
+    private boolean available;
 
+    //constructors
     public Timeslot(int day, int month, int year, int hour, int minutes, int startMinute, int endMinute, Doctor doctor) {
         this.day = day;
         this.month = month;
@@ -20,6 +24,7 @@ public class Timeslot {
         this.startMinute = startMinute;
         this.endMinute = endMinute;
         this.doctor = doctor;
+        this.available = true;
     }
 
     public Timeslot(){
@@ -31,8 +36,10 @@ public class Timeslot {
         this.startMinute = 0;
         this.endMinute = 0;
         this.doctor = null;
+        this.available = true;
     }
 
+    //getters and setters
     public int getDay() {
         return day;
     }
@@ -97,12 +104,27 @@ public class Timeslot {
         this.doctor = doctor;
     }
 
+
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public void setAvailable(boolean available) {
+        this.available = available;
+    }
+
+    //returns date
+    public LocalDate getDate(){
+        return LocalDate.of(year,month,day);
+    }
+
+
     @Override
     public String toString() {
-        return "Timeslot{" + "(" + day + "/" + month + "/" + year + "), " +
+        return "(" + day + "/" + month + "/" + year + "), " +
                 hour + ":" + minutes +
-                "(" + "startMinute: " + startMinute + ", endMinute: " + endMinute + ")" +
-                "doctor: " + doctor + "}";
+                "(" + "startMinute: " + hour + ":" + startMinute + ", endMinute: " + hour + ":" + endMinute + ")" + ", " +
+                "Doctor: " + doctor.getName()  + " " + doctor.getSurname();
 
     }
 }

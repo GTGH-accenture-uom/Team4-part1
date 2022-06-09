@@ -10,7 +10,9 @@ public class Insured {
     private Date date;
     private String surname;
     private String email;
+    private Timeslot timeslot;
 
+    //constructors
     public Insured(String afm, String amka, String name, Date date, String surname, String email) {
         this.afm = afm;
         this.amka = amka;
@@ -18,6 +20,7 @@ public class Insured {
         this.date = date;
         this.surname = surname;
         this.email = email;
+        this.timeslot = null;
     }
 
     public Insured() {
@@ -27,8 +30,10 @@ public class Insured {
         this.date = null;
         this.surname = null;
         this.email = null;
+        this.timeslot = null;
     }
 
+    //getters and setters
     public String getAfm() {
         return afm;
     }
@@ -77,6 +82,14 @@ public class Insured {
         this.email = email;
     }
 
+    public Timeslot getTimeslot() {
+        return timeslot;
+    }
+    public void setTimeslot(Reservation r) {
+        this.timeslot = r.getTimeslot();
+    }
+
+    //toString method
     @Override
     public String toString() {
         return "Insured{" +
