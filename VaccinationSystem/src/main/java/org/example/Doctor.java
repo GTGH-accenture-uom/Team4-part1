@@ -1,5 +1,6 @@
 package org.example;
 
+import java.sql.Time;
 import java.util.List;
 
 public class Doctor {
@@ -8,6 +9,7 @@ public class Doctor {
     private String surname;
     private List<Timeslot> timeslotList;
 
+    //constructors
     public Doctor(){
         this.amka = null;
         this.name = null;
@@ -22,6 +24,7 @@ public class Doctor {
         this.timeslotList = timeslotList;
     }
 
+    //getters and setters
     public String getAmka() {
         return amka;
     }
@@ -54,13 +57,32 @@ public class Doctor {
         this.timeslotList = timeslotList;
     }
 
+    //add timeslots to timeslotList
+    public void addTimeslot(Timeslot t){
+        timeslotList.add(t);
+    }
+
+    //prints vaccinations foreach doctor
+    public String VaccinationPerDoctor(List<Vaccination> vaccinationList){
+        String d="\n";
+        d += ("Vaccinations for Doctor " + this.getName() + " " + this.getSurname() + ":");
+        for(Vaccination v : vaccinationList)
+        {
+            if(v.getDoctor().equals(this))
+            {
+                d += ("\n" + v.getVaccinationDate() + " " + v.getInsured().getName() + " " + v.getInsured().getSurname());
+            }
+        }
+        return d;
+    }
+
+    //toString method
     @Override
     public String toString() {
         return "Doctor{" +
                 "amka='" + amka + '\'' +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", timeslotList=" + timeslotList +
                 '}';
     }
 }
