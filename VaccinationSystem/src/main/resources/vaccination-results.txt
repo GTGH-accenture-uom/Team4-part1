@@ -30,3 +30,35 @@ Vaccinations for Doctor Maria Anastasiou:
 
 Not vaccinated: 
 Insured{afm='632023215', amka:'24006124586', name:'Nikos', surname:'Georgiou', date:9/JULY/1955, email:'ng@gmail.com'}
+
+
+Reservations for Vaccination Center 1:
+(24/6/2022), 13:0(startMinute: 13:0, endMinute: 13:30), Doctor: Katerina Papadopoulou
+
+Reservations for Vaccination Center 2:
+(16/6/2022), 17:30(startMinute: 17:30, endMinute: 17:59), Doctor: Maria Anastasiou
+
+Available Appointments for Vaccination Center 1:
+(15/6/2022), 16:0(startMinute: 16:0, endMinute: 16:30), Doctor: Nikos Xatzivasileiou
+(16/6/2022), 17:0(startMinute: 17:0, endMinute: 17:30), Doctor: Katerina Papadopoulou
+
+Available Appointments for Vaccination Center 2:
+(24/6/2022), 13:30(startMinute: 13:30, endMinute: 13:59), Doctor: Maria Anastasiou
+(15/6/2022), 16:30(startMinute: 16:30, endMinute: 16:59), Doctor: Giorgos Dionisiou
+
+Vaccinations for Doctor Nikos Xatzivasileiou:
+2022-05-20 Nikos Pappas
+
+Vaccinations for Doctor Katerina Papadopoulou:
+2022-06-24 Ioanna Athanasiou
+2022-05-22 Giorgos Dimitriou
+
+Vaccinations for Doctor Giorgos Dionisiou:
+2022-05-29 Eydokia Sotiriou
+2022-05-25 Dimitris Bellos
+
+Vaccinations for Doctor Maria Anastasiou:
+2022-06-16 Giannis Filippou
+
+Not vaccinated: 
+Insured{afm='632023215', amka:'24006124586', name:'Nikos', surname:'Georgiou', date:9/JULY/1955, email:'ng@gmail.com'}

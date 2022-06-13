@@ -136,9 +136,9 @@ public class Main {
                 + "\n" + d1.VaccinationPerDoctor(vaccinationList) + "\n" + d2.VaccinationPerDoctor(vaccinationList) + "\n" +
                 d3.VaccinationPerDoctor(vaccinationList) + "\n" + d4.VaccinationPerDoctor(vaccinationList) + "\n" + Insured.checkforVaccinated(insuredList,60);
 
-        FileWritter fileWritter = new FileWritter();
-        fileWritter.createFile();
-        fileWritter.writeFile(results);
+        FileWriter fileWriter = new FileWriter();
+        fileWriter.createFile();
+        fileWriter.writeFile(results);
 
 
 
