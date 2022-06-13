@@ -2,6 +2,7 @@ package org.example;
 
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.List;
 
 public class Insured {
 
@@ -88,6 +89,18 @@ public class Insured {
     }
     public void setTimeslot(Reservation r) {
         this.timeslot = r.getTimeslot();
+    }
+
+    //insured check for vaccinated
+    public static String checkforVaccinated(List<Insured> insuredList, int age){
+        String c = "\n";
+        c += ("Not vaccinated: ");
+        for(Insured insured: insuredList){
+            if(LocalDate.now().getYear()-insured.getDate().getYear() >= age && insured.getTimeslot()==null){
+                c += ("\n" + insured);
+            }
+        }
+        return c;
     }
 
     //toString method

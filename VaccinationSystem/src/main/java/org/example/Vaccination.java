@@ -8,6 +8,7 @@ public class Vaccination {
     private LocalDate vaccinationDate;
     private LocalDate expirationDate;
 
+    //constructors
     public Vaccination(){
         this.insured = new Insured();
         this.doctor = new Doctor();
@@ -21,6 +22,7 @@ public class Vaccination {
         this.expirationDate = expirationDate;
     }
 
+    //getters and setters
     public Insured getInsured() {
         return insured;
     }
@@ -53,6 +55,12 @@ public class Vaccination {
         this.expirationDate = expirationDate;
     }
 
+    //duration for vaccination
+    public static LocalDate VaccDuration(LocalDate ld){
+        return LocalDate.of(ld.getYear() + 2, ld.getMonth(), ld.getDayOfMonth());
+    }
+
+    //toString method
     @Override
     public String toString() {
         return "Vaccination{" +
